@@ -18,7 +18,6 @@ class LettersumTests(unittest.TestCase):
         with open("words_194.txt") as f:
             self.word_list_194 = f.read().splitlines()        
 
-        
     def test_find_unique_char_words(self):
         print("Testing just the word_lists")
         self.assertEqual(find_unique_char_words(self.word_list_188), self.word_sets_188)
@@ -40,8 +39,6 @@ class LettersumTests(unittest.TestCase):
         test_sets = find_unique_char_words_by_sum(194)
         for word_set in self.word_sets_194:
             self.assertIn(word_set, test_sets)
-
-    
 
     def test_words_samesum_noletters(self):
         lettersum = 188
